@@ -10,7 +10,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>users</module>
-        <module>users</module>
     </modules>
 
     <properties>
