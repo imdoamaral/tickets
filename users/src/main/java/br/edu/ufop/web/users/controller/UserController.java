@@ -15,10 +15,6 @@ import java.util.List;
 public class UserController {
     private final UserService userService;
 
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
-
     @GetMapping("/status")
     public ResponseEntity<String> getStatus() {
         return ResponseEntity.ok("User service is running");
