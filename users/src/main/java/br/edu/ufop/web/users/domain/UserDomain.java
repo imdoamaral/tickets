@@ -1,5 +1,6 @@
 package br.edu.ufop.web.users.domain;
 
+import br.edu.ufop.web.users.enums.EnumUserType;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -19,6 +20,11 @@ public class UserDomain {
     private String city;
 
     private String creditCardNumber;
+
+    // network
+
+    // user type
+    EnumUserType type;
 
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
