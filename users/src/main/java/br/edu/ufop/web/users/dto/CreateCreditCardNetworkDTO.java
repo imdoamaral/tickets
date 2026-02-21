@@ -1,4 +1,4 @@
 package br.edu.ufop.web.users.dto;
 
-public class CreateCreditCardNetworkDTO {
+public record CreateCreditCardNetworkDTO(String name) {
 }
