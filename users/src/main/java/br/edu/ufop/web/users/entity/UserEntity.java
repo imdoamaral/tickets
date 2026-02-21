@@ -34,6 +34,10 @@ public class UserEntity {
 
     // credit card network
 
+    @ManyToOne
+    @JoinColumn(name = "credit_card_network_id")
+    private CCNetworkEntity ccNetwork;
+
     private EnumUserType type;
 
     private LocalDateTime createdAt;
