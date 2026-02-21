@@ -22,9 +22,10 @@ public class UserDomain {
     private String creditCardNumber;
 
     // network
+    private CCNetworkDomainJava ccNetwork;
 
     // user type
-    EnumUserType type;
+    private EnumUserType type;
 
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
