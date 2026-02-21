@@ -22,7 +22,7 @@ public class UserDomain {
     private String creditCardNumber;
 
     // network
-    private CCNetworkDomainJava ccNetwork;
+    private CCNetworkDomain ccNetwork;
 
     // user type
     private EnumUserType type;
