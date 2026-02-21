@@ -23,4 +23,8 @@ public class CCNetworkEntity {
 
     @Column(nullable = false, unique = true, columnDefinition = "varchar(100)")
     private String name;
+
+    private String comment;
+
+    private Double tax;
 }
