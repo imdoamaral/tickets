@@ -12,5 +12,19 @@ POST {{urlServer}}/ccn
 Content-Type: application/json
 
 {
-  "name": "visa"
+  "name": ""
+}
+
+###
+GET {{urlServer}}/users
+
+###
+POST {{urlServer}}/users
+Content-Type: application/json
+
+{
+  "name": "Israel",
+  "email": "israel@example.com",
+  "password": "123456",
+  "creditCardNetworkId": "4a6b3e45-21cb-4a8f-809b-12454f59019e"
 }
