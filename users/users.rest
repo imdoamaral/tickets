@@ -23,11 +23,33 @@ POST {{urlServer}}/users
 Content-Type: application/json
 
 {
-  "name": "Israel",
-  "email": "israel@example.com",
+  "name": "Ana",
+  "email": "ana@example.com",
   "password": "123456",
-  "creditCardNetworkId": "4a6b3e45-21cb-4a8f-809b-12454f59019e"
+  "creditCardNetworkId": "0b095a46-52e9-4a09-af78-a3bfd8f11196"
 }
 
 ###
 GET {{urlServer}}/users/8c66c443-509a-41a5-bf6d-9d795a978584
+
+###
+GET {{urlServer}}/users/name/Ana
+
+###
+PUT {{urlServer}}/users
+Content-Type: application/json
+
+{
+  "id": "22b8c371-186a-4625-81e5-eca42e3bcdd4",
+  "name": "Maria Tereza",
+  "city": "Itabira"
+}
+
+###
+DELETE {{urlServer}}/users
+Content-Type: application/json
+
+{
+  "id": "41a4f1ee-fea2-4be3-b9e5-b752408d3f5f",
+  "password": "123456"
+}
