@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.List;
 import java.util.UUID;
 
-@FeignClient(name = "users-service", url = "http://localhost3000")
+@FeignClient("users-service")
 public interface UserServiceClient {
     @GetMapping("/users")
     public List<UserServiceDTO> getAllUsers();
