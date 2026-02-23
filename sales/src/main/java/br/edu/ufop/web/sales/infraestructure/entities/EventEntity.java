@@ -1,5 +1,6 @@
 package br.edu.ufop.web.sales.infraestructure.entities;
 
+import br.edu.ufop.web.sales.enums.EnumEventType;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -18,8 +19,8 @@ public class EventEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
-
     private String description;
+    private EnumEventType type;
 
     private LocalDateTime dateTime;
 
