@@ -1,6 +1,8 @@
-package br.edu.ufop.web.sales.controller.dtos.events;
+package br.edu.ufop.web.sales.controller;
 
 import br.edu.ufop.web.sales.business.services.EventService;
+import br.edu.ufop.web.sales.controller.dtos.events.CreateEventDTO;
+import br.edu.ufop.web.sales.controller.dtos.events.EventDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
