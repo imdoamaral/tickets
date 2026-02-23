@@ -1,6 +1,6 @@
 package br.edu.ufop.web.sales.controller.dtos.events;
 
-import br.edu.ufop.web.sales.enums.EnumSalesStatus;
+import br.edu.ufop.web.sales.enums.EnumSaleStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,7 +18,7 @@ public class SaleDTO {
     private UUID user_id;
     private EventDTO event;
     private LocalDateTime dateTime;
-    private EnumSalesStatus status;
+    private EnumSaleStatus status;
 
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;

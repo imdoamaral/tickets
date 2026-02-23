@@ -1,6 +1,6 @@
 package br.edu.ufop.web.sales.infraestructure.entities;
 
-import br.edu.ufop.web.sales.enums.EnumSalesStatus;
+import br.edu.ufop.web.sales.enums.EnumSaleStatus;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -28,7 +28,7 @@ public class SaleEntity {
 
     private LocalDateTime dateTime;
 
-    private EnumSalesStatus status;
+    private EnumSaleStatus status;
 
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;

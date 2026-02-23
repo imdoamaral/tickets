@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-public enum EnumSalesStatus {
+public enum EnumSaleStatus {
     EM_ABERTO(1, "Em aberto"),
     PAGO(2, "Pago"),
     CANCELADO(3, "Cancelado"),
