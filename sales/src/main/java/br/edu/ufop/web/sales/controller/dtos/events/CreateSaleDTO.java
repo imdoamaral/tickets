@@ -12,6 +12,6 @@ import java.util.UUID;
 @AllArgsConstructor
 @Builder
 public class CreateSaleDTO {
-    private UUID id;
+    private UUID userId;
     private UUID eventId;
 }
