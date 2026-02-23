@@ -12,7 +12,7 @@ POST {{urlServer}}/ccn
 Content-Type: application/json
 
 {
-  "name": ""
+  "name": "master"
 }
 
 ###
@@ -28,3 +28,6 @@ Content-Type: application/json
   "password": "123456",
   "creditCardNetworkId": "4a6b3e45-21cb-4a8f-809b-12454f59019e"
 }
+
+###
+GET {{urlServer}}/users/8c66c443-509a-41a5-bf6d-9d795a978584
