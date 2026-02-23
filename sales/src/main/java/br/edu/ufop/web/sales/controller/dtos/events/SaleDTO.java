@@ -15,7 +15,7 @@ import java.util.UUID;
 @Builder
 public class SaleDTO {
     private UUID id;
-    private UUID user_id;
+    private UUID userId;
     private EventDTO event;
     private LocalDateTime dateTime;
     private EnumSaleStatus status;
