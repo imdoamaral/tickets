@@ -1,0 +1,17 @@
+package br.edu.ufop.web.sales.enums;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@AllArgsConstructor
+@Getter
+public enum EnumEventType {
+    PALESTRA(1, "Palestra"),
+    SHOW(2, "Show"),
+    TEATRO(3, "Teatro"),
+    CURSO(4, "Curso"),
+    GERAL(5, "Geral/Não especificado");
+
+    private Integer id;
+    private String description;
+}
