@@ -12,7 +12,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class SalesService {
+public class SaleService {
     private final ISaleRepository saleRepository;
 
     public List<SaleDTO> getAll() {
