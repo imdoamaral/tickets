@@ -2,6 +2,7 @@ package br.edu.ufop.web.sales.business.converters;
 
 import br.edu.ufop.web.sales.controller.dtos.events.CreateEventDTO;
 import br.edu.ufop.web.sales.controller.dtos.events.EventDTO;
+import br.edu.ufop.web.sales.controller.dtos.events.UpdateEventDTO;
 import br.edu.ufop.web.sales.enums.EnumEventType;
 import br.edu.ufop.web.sales.infraestructure.entities.EventEntity;
 import lombok.AccessLevel;
@@ -31,5 +32,26 @@ public class EventConverter {
                 .endingSales(createEventDTO.getEndingSales())
                 .price(createEventDTO.getPrice())
                 .build();
+    }
+
+    public static void updateEntity(EventEntity eventEntity, UpdateEventDTO updateEventDTO) {
+        if (updateEventDTO.getDescription() != null) {
+            eventEntity.setDescription(updateEventDTO.getDescription());
+        }
+        if (updateEventDTO.getType() != null) {
+            eventEntity.setType(EnumEventType.getById(updateEventDTO.getType()));
+        }
+        if (updateEventDTO.getDateTime() != null) {
+            eventEntity.setDateTime(updateEventDTO.getDateTime());
+        }
+        if (updateEventDTO.getStartingSales() != null) {
+            eventEntity.setStartingSales(updateEventDTO.getStartingSales());
+        }
+        if (updateEventDTO.getEndingSales() != null) {
+            eventEntity.setEndingSales(updateEventDTO.getEndingSales());
+        }
+        if (updateEventDTO.getPrice() != null) {
+            eventEntity.setPrice(updateEventDTO.getPrice());
+        }
     }
 }
