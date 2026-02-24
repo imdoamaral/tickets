@@ -2,6 +2,7 @@ package br.edu.ufop.web.sales.business.converters;
 
 import br.edu.ufop.web.sales.controller.dtos.events.CreateSaleDTO;
 import br.edu.ufop.web.sales.controller.dtos.events.SaleDTO;
+import br.edu.ufop.web.sales.controller.dtos.events.UpdateSaleDTO;
 import br.edu.ufop.web.sales.infraestructure.entities.EventEntity;
 import br.edu.ufop.web.sales.infraestructure.entities.SaleEntity;
 import lombok.AccessLevel;
@@ -26,5 +27,11 @@ public class SaleConverter {
                 .userId(createSaleDTO.getUserId())
                 .event(EventEntity.builder().id(createSaleDTO.getEventId()).build())
                 .build();
+    }
+
+    public static void updateEntity(SaleEntity saleEntity, UpdateSaleDTO updateSaleDTO) {
+        if (updateSaleDTO.getStatus() != null) {
+            saleEntity.setStatus(updateSaleDTO.getStatus());
+        }
     }
 }
