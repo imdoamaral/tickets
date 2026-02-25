@@ -9,7 +9,7 @@
 GET {{urlServer}}/events
 
 ### 2. GET - Buscar evento por ID
-GET {{urlServer}}/events/94facfad-2c94-43e3-aac3-5f1472cfe568
+GET {{urlServer}}/events/8b7a5df3-6047-4769-b168-a3d89aa5cb37
 
 ### 3. POST - Criar novo evento
 POST {{urlServer}}/events
@@ -53,19 +53,19 @@ Content-Type: application/json
 GET {{urlServer}}/sales
 
 ### 7. GET - Buscar venda por ID
-GET {{urlServer}}/sales/a1b2c3d4-e5f6-7890-abcd-ef1234567890
+GET {{urlServer}}/sales/f037c710-dfb5-4a7e-8dc6-106d530db892
 
 ### 8. POST - Criar nova venda
 POST {{urlServer}}/sales
 Content-Type: application/json
 
 {
-  "eventId": "94facfad-2c94-43e3-aac3-5f1472cfe568",
+  "eventId": "8b7a5df3-6047-4769-b168-a3d89aa5cb37",
   "userId": "8c66c443-509a-41a5-bf6d-9d795a978584"
 }
 
 ### 9. PUT - Atualizar status da venda por ID
-PUT {{urlServer}}/sales/a1b2c3d4-e5f6-7890-abcd-ef1234567890
+PUT {{urlServer}}/sales/c0b640a8-cfee-445e-bf2f-bcb5fffe9682
 Content-Type: application/json
 
 {
@@ -77,5 +77,5 @@ DELETE {{urlServer}}/sales
 Content-Type: application/json
 
 {
-  "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+  "id": "c0b640a8-cfee-445e-bf2f-bcb5fffe9682"
 }
