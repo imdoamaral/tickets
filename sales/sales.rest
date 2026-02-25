@@ -1,29 +1,81 @@
-###
+# Servidor
 @urlServer = http://localhost:4000
 
-###
+### ============================================
+### EVENTS - ENDPOINTS DE EVENTOS
+### ============================================
+
+### 1. GET - Listar todos os eventos
 GET {{urlServer}}/events
 
-###
+### 2. GET - Buscar evento por ID
+GET {{urlServer}}/events/94facfad-2c94-43e3-aac3-5f1472cfe568
+
+### 3. POST - Criar novo evento
 POST {{urlServer}}/events
 Content-Type: application/json
 
 {
   "description": "Curso Spring JPA",
+  "type": 1,
   "dateTime": "2025-12-20T18:00:00",
   "startingSales": "2025-12-10T20:00:00",
   "endingSales": "2025-12-19T23:59:59",
   "price": 1500
 }
 
-###
+### 4. PUT - Atualizar evento por ID
+PUT {{urlServer}}/events/94facfad-2c94-43e3-aac3-5f1472cfe568
+Content-Type: application/json
+
+{
+  "description": "Curso Spring JPA - Avançado",
+  "type": 1,
+  "dateTime": "2025-12-20T19:00:00",
+  "startingSales": "2025-12-10T20:00:00",
+  "endingSales": "2025-12-19T23:59:59",
+  "price": 2000
+}
+
+### 5. DELETE - Deletar evento
+DELETE {{urlServer}}/events
+Content-Type: application/json
+
+{
+  "id": "94facfad-2c94-43e3-aac3-5f1472cfe568"
+}
+
+### ============================================
+### SALES - ENDPOINTS DE VENDAS
+### ============================================
+
+## 6. GET - Listar todas as vendas
 GET {{urlServer}}/sales
 
-###
+### 7. GET - Buscar venda por ID
+GET {{urlServer}}/sales/a1b2c3d4-e5f6-7890-abcd-ef1234567890
+
+### 8. POST - Criar nova venda
 POST {{urlServer}}/sales
 Content-Type: application/json
 
 {
   "eventId": "94facfad-2c94-43e3-aac3-5f1472cfe568",
   "userId": "8c66c443-509a-41a5-bf6d-9d795a978584"
+}
+
+### 9. PUT - Atualizar status da venda por ID
+PUT {{urlServer}}/sales/a1b2c3d4-e5f6-7890-abcd-ef1234567890
+Content-Type: application/json
+
+{
+  "status": "PAGO"
+}
+
+### 10. DELETE - Deletar venda
+DELETE {{urlServer}}/sales
+Content-Type: application/json
+
+{
+  "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
 }
