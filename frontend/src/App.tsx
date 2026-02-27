@@ -1,12 +1,11 @@
 import {Button} from "@/components/ui/button.tsx";
-import ListUsers from "@/pages/users/ListUsers.tsx";
+import AppHeader from "@/components/AppHeader.tsx";
 
 function App() {
 
   return <>
-      <h1 className={"text-3xl font-bold"}>Sistema de Vendas de Tickets</h1>
+      <AppHeader/>
       <Button>Login</Button>
-      <ListUsers />
   </>
 }
 
