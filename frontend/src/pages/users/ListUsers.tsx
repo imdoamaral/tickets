@@ -11,11 +11,14 @@ const ListUsers = () => {
     // Hook: useEffect
     useEffect(() => {
 
-        api.get('/api/users')
+        api.get('/users')
             .then(response => {
-                console.log(response)
+                console.log('Response completo:', response)
+                console.log('Response data:', response.data)
+                console.log('Tipo de data:', typeof response.data)
                 setUsers(response.data)
             })
+
     }, [])
 
     return (
