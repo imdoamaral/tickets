@@ -1,21 +1,24 @@
-import api from "@/services/api.ts";
-import type { UserInterface } from "@/types/users.ts";
-import { useEffect, useState } from "react";
+import api from "@/services/api"
+import type {UserInterface} from "@/types/users"
+import {useEffect, useState} from "react"
+
 
 const ListUsers = () => {
-    // Hook - useState
+
+    // Hook: useState
     const [users, setUsers] = useState<UserInterface[]>([])
 
-    // Hook - useEffect
+    // Hook: useEffect
     useEffect(() => {
+
         api.get('/api/users')
             .then(response => {
                 console.log(response)
                 setUsers(response.data)
             })
-    }, []);
+    }, [])
 
-    return(
+    return (
         <>
             <h2>Lista de usuários</h2>
             <ul>
