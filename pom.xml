@@ -11,6 +11,8 @@
     <modules>
         <module>users</module>
         <module>sales</module>
+        <module>gateway</module>
+        <module>nameserver</module>
     </modules>
 
     <properties>
