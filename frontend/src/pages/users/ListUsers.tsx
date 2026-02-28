@@ -1,7 +1,6 @@
 import api from "@/services/api"
 import type {UserInterface} from "@/types/users"
 import {useEffect, useState} from "react"
-import AppHeader from "@/components/AppHeader.tsx";
 import Card from "@/components/Card.tsx";
 
 
@@ -24,23 +23,20 @@ const ListUsers = () => {
     }, [])
 
     return (
-        <>
-            <AppHeader title={"Lista de usuários"}/>
-            <div className="flex flex-wrap justify-center">
-                {
-                    users.map(user => (
-                        <Card
-                            key={user.id}
-                            id={user.id}
-                            name={user.name}
-                            updateUrl={`/users/${user.id}`}
-                            deleteUrl={`/users/${user.id}/delete`}
+        <div className="flex flex-wrap justify-center">
+            {
+                users.map(user => (
+                    <Card
+                        key={user.id}
+                        id={user.id}
+                        name={user.name}
+                        updateUrl={`/users/${user.id}`}
+                        deleteUrl={`/users/${user.id}/delete`}
 
-                        />
-                    ))
-                }
-            </div>
-        </>
+                    />
+                ))
+            }
+        </div>
     )
 }
 
