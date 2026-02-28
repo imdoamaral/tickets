@@ -1,11 +1,13 @@
-import {Button} from "@/components/ui/button.tsx";
 import AppHeader from "@/components/AppHeader.tsx";
+import { Outlet } from "react-router-dom";
 
 function App() {
 
   return <>
       <AppHeader/>
-      <Button>Login</Button>
+      <div className="p-4">
+        <Outlet />
+      </div>
   </>
 }
 
