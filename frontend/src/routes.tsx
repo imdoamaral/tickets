@@ -1,20 +1,38 @@
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import App from "./App";
-import ListUsers from "./pages/users/ListUsers";
+import { createBrowserRouter } from 'react-router-dom'
+import App from './App'
+import ListUsers from './pages/users/ListUsers'
+import CreateEvent from "@/pages/event/CreateEvent.tsx";
+import ListSales from './pages/sales/ListSales'
+import CreateSale from './pages/sales/CreateSale'
+import UpdateSaleStatus from './pages/sales/UpdateSaleStatus'
 
-export default function AppRoutes() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route
-                    path="/"
-                    element={<App/>}
-                />
-                <Route
-                    path="/users"
-                    element={<ListUsers/>}
-                />
-            </Routes>
-        </BrowserRouter>
-    )
-}
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <App />,
+        children: [
+            {
+                path: '/users',
+                element: <ListUsers />
+            },
+            {
+                path: '/events/create',
+                element: <CreateEvent />
+            },
+            {
+                path: '/sales',
+                element: <ListSales />
+            },
+            {
+                path: '/sales/create',
+                element: <CreateSale />
+            },
+            {
+                path: '/sales/update-status',
+                element: <UpdateSaleStatus />
+            }
+        ]
+    }
+])
+
+export default router
